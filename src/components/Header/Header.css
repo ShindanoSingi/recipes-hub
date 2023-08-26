@@ -364,6 +364,7 @@ NavLink{
 
       .recipe-logo img{
             width: 3rem;
+            border: 2px solid var(--list-menu-item-color);
       }
 
       .nav-links{
