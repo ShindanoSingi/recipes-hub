@@ -26,12 +26,12 @@ NavLink{
 }
 
 
-.recipe-logo{
-      width: 5rem;
+/* .recipe-logo{
+      width: 3rem;
       border-radius: 10px;
       background-size: cover;
       background-position: center;
-}
+} */
 
 .hamburger-icon{
       color: var(--hamburger-color);
@@ -314,7 +314,7 @@ NavLink{
       }
 
       .recipe-logo{
-            width: 6rem;
+            width: 4rem;
       }
 
       .list-menu {
@@ -358,24 +358,26 @@ NavLink{
 }
 
 @media screen and (min-width: 679px){
-
-      *{
+      body{
             font-size: 1.2rem;
+      }
+
+      .recipe-logo img{
+            width: 3rem;
       }
 
       .nav-links{
             color: var(--list-menu-item-color);
-            font-size: 1rem;
+            font-size: 0.8rem;
             text-align: center;
             padding: 0.2rem 0;
-            width: 8rem;
+            width: 5rem;
             transition: all 0.3s ease-in-out;
             text-decoration: none;
 
             &:hover{
                   background-color: var(--list-menu-item-color);
                   color: var(--list-menu-color);
-
                   text-align: center;
             }
 
@@ -397,12 +399,8 @@ NavLink{
 
             &:first-child{
                   border-top: none;
+                  font-size: 0.8rem;
             }
-
-      }
-
-      .recipe-logo{
-            width: 5rem;
       }
 
       .list-menu {
@@ -420,6 +418,44 @@ NavLink{
 
       .close-icon{
             display: none;
+      }
+
+      .contact, .about, .home{
+            font-size: 1rem;
+      }
+
+
+      .active{
+            color: var(--list-menu-item-color);
+            font-size: 0.8rem;
+            text-align: center;
+            padding: 0.2rem 0;
+            width: 5rem;
+            transition: all 0.3s ease-in-out;
+            text-decoration: none;
+            background-color: var(--list-menu-item-color);
+                  color: var(--list-menu-color);
+
+            &:first-child{
+                  border-radius: 0px 10px 0px 10px;
+            }
+
+            &:nth-child(2){
+                  border-radius: 0px 10px 0px 10px;
+            }
+
+            &:last-child{
+                  border-radius: 0px 10px 0px 10px;
+            }
+
+            &:last-child{
+                  border-bottom: none;
+            }
+
+            &:first-child{
+                  border-top: none;
+                  font-size: 0.8rem;
+            }
       }
 }
 
