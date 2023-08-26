@@ -6,10 +6,10 @@ const loaderSlice = createSlice({
 		isLoading: false,
 	},
 	reducers: {
-		showLoader: (state) => {
+		showLoader: state => {
 			state.isLoading = true;
 		},
-		hideLoader: (state) => {
+		hideLoader: state => {
 			state.isLoading = false;
 		},
 	},

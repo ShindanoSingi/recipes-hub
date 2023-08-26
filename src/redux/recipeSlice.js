@@ -28,6 +28,7 @@ const recipeSlice = createSlice({
 		recipeAuthorTwitch: '',
 		recipeAuthorDiscord: '',
 		recipeAuthorOther: '',
+		hamburgerClicked: false,
 	},
 
 	reducers: {
@@ -103,6 +104,9 @@ const recipeSlice = createSlice({
 		setRecipeAuthorDiscord: (state, action) => {
 			state.recipeAuthorDiscord = action.payload;
 		},
+		setHamburgerClicked: (state, action) => {
+			state.hamburgerClicked = action.payload;
+		},
 	},
 });
 
@@ -131,4 +135,6 @@ export const {
 	setRecipeAuthorGithub,
 	setRecipeAuthorTwitch,
 	setRecipeAuthorDiscord,
+	setHamburgerClicked,
 } = recipeSlice.actions;
+export default recipeSlice.reducer;
