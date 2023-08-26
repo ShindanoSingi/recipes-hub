@@ -27,14 +27,17 @@ const Header = () => {
 			{!hamburgerClicked &&
 				<GiHamburgerMenu
 					onClick={handleHamburgerClick}
-					className="hamburger-icon d-xl-none "
+					className="hamburger-icon"
 				/>}
 
 			{hamburgerClicked &&
-				<MdClose onClick={handleHamburgerClick} className="close-icon" />}
+				<MdClose
+					onClick={handleHamburgerClick}
+					className="close-icon d-lg-none"
+				/>}
 
 			{hamburgerClicked &&
-				<div className="list-menu d-flex flex-column align-items-center justify-content-evenly position-absolute">
+				<div className="list-menu">
 					<NavLink className="nav-link nav-link-top " to="/">
 						<span className="home">Home</span>
 					</NavLink>
@@ -47,6 +50,21 @@ const Header = () => {
 						<span className="contact">Contact</span>
 					</NavLink>
 				</div>}
+
+			<div className="list-menus">
+			<NavLink className="nav-links  nav-link-home " to="/">
+				<span className="home">Home</span>
+			</NavLink>
+
+			<NavLink className="nav-links  nav-link-about" to="/about">
+				<span className="about">About</span>
+			</NavLink>
+
+			<NavLink className="nav-links  nav-link-contact" to="/contact">
+				<span className="contact">Contact</span>
+			</NavLink>
+			</div>
+
 		</div>
 	);
 };

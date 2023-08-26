@@ -98,7 +98,7 @@ NavLink{
 
 }
 
-@media only screen and (max-width: 884px){
+/* @media only screen and (max-width: 884px){
 
       .recipe-logo{
             width: 6rem;
@@ -115,13 +115,12 @@ NavLink{
       }
 
       .nav-link{
-            /* font-size: 1.5rem; */
             padding: 0.2rem 0;
             width: 100%;
             transition: all 0.3s ease-in-out;
             border-bottom: 2px solid var(--list-menu-item-color);
       }
-}
+} */
 
 /* @media only screen and (max-width: 834px){
       .list-menu {
@@ -223,6 +222,10 @@ NavLink{
             font-size: 1.2rem;
       }
 
+      .list-menus{
+            display: none;
+      }
+
       .close-icon, .hamburger-icon{
             font-size: 2rem;
       }
@@ -245,6 +248,10 @@ NavLink{
             top: 9%;
             left: 77%;
       }
+
+      .list-menus{
+            display: none;
+      }
 }
 
 @media only screen and (min-width: 375px){
@@ -254,25 +261,169 @@ NavLink{
             top: 9%;
             left: 76.4%;
       }
+
+      .list-menus{
+            display: none;
+      }
 }
 
 @media only screen and (min-width: 375px){
 
       .list-menu {
+            position: absolute;
             width: 5rem;
             top: 9%;
             left: 76.8%;
       }
+
+      .list-menus{
+            display: none;
+      }
 }
 
-@media only screen and (min-width: 414px){
+@media screen and (min-width: 414px){
 
       .list-menu {
+            position: absolute;
             width: 5rem;
             top: 7.8%;
             left: 79.5%;
       }
+
+      .list-menus{
+            display: none;
+      }
+
+      .hamburger-icon{
+           display: block;
+      }
+
+      .close-icon{
+            display: block;
+      }
 }
+
+@media screen and (min-width: 768px){
+
+      .close-icon, .hamburger-icon{
+            font-size: 3rem;
+      }
+
+      .home, .about, .contact{
+            font-size: 1.5rem;
+      }
+
+      .recipe-logo{
+            width: 6rem;
+      }
+
+      .list-menu {
+            position: absolute;
+            width: 8rem;
+            top: 8.3%;
+            left: 82%;
+      }
+
+      .list-menus{
+            display: none;
+      }
+
+      .hamburger-icon{
+           display: block;
+      }
+
+      .close-icon{
+            display: block;
+      }
+
+      .nav-link{
+
+            &:hover{
+                  background-color: var(--list-menu-item-color);
+                  color: var(--list-menu-color);
+                  transition: all 0.1s ease-in-out;
+                  width: 100%;
+                  text-align: center;
+            }
+
+      &:first-child{
+            padding-top: 0.5rem;
+      }
+
+      &:last-child{
+            padding-bottom: 0.7rem;
+      }
+
+      }
+}
+
+@media screen and (min-width: 679px){
+
+      *{
+            font-size: 1.2rem;
+      }
+
+      .nav-links{
+            color: var(--list-menu-item-color);
+            font-size: 1rem;
+            text-align: center;
+            padding: 0.2rem 0;
+            width: 8rem;
+            transition: all 0.3s ease-in-out;
+            text-decoration: none;
+
+            &:hover{
+                  background-color: var(--list-menu-item-color);
+                  color: var(--list-menu-color);
+
+                  text-align: center;
+            }
+
+            &:first-child:hover{
+                  border-radius: 0px 10px 0px 10px;
+            }
+
+            &:nth-child(2):hover{
+                  border-radius: 0px 10px 0px 10px;
+            }
+
+            &:last-child:hover{
+                  border-radius: 0px 10px 0px 10px;
+            }
+
+            &:last-child{
+                  border-bottom: none;
+            }
+
+            &:first-child{
+                  border-top: none;
+            }
+
+      }
+
+      .recipe-logo{
+            width: 5rem;
+      }
+
+      .list-menu {
+            display: none;
+      }
+
+      .list-menus{
+            display: flex;
+            gap: 0rem;
+      }
+
+      .hamburger-icon{
+           display: none;
+      }
+
+      .close-icon{
+            display: none;
+      }
+}
+
+
 
 
 
