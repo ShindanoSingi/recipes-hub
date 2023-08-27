@@ -40,14 +40,32 @@ const Header = () => {
 
 			{hamburgerClicked &&
 				<div className="list-menu">
-					<NavLink className="nav-link" to="/login">
+					<NavLink
+						className="nav-link"
+						onClick={() => {
+							dispatch(setHamburgerClicked(false));
+						}}
+						to="/login"
+					>
 						<span className="login">Login</span>
 					</NavLink>
-					<NavLink className="nav-link" to="/">
+					<NavLink
+						onClick={() => {
+							dispatch(setHamburgerClicked(false));
+						}}
+						className="nav-link"
+						to="/"
+					>
 						<span className="home">Home</span>
 					</NavLink>
 
-					<NavLink className="nav-link" to="/about">
+					<NavLink
+						onClick={() => {
+							dispatch(setHamburgerClicked(false));
+						}}
+						className="nav-link"
+						to="/about"
+					>
 						<span className="about">About</span>
 					</NavLink>
 
