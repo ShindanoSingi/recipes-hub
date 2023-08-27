@@ -80,6 +80,8 @@
 
       .recipe-logo{
             width: 4rem;
+            border: 2px solid var(--list-menu-item-color);
+            border-radius: 10px;
       }
 
       .list-menu {
@@ -108,6 +110,7 @@
       }
 
       .list-menu {
+            position: absolute;
             width: 5rem;
             top: 11.8%;
             left: 74.5%;
@@ -117,12 +120,14 @@
 @media screen and (min-width: 360px){
 
       .list-menu {
+            position: absolute;
             width: 5rem;
             top: 9%;
             left: 77%;
       }
 
       .list-menus{
+
             display: none;
       }
 }
