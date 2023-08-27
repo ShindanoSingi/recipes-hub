@@ -1,7 +1,6 @@
 import React from 'react';
-import { NavLink, basename } from 'react-router-dom';
+import { NavLink} from 'react-router-dom';
 import recipesHubLogo from '../../assets/recipes-hub-logo.png';
-import { Link } from 'react-router-dom';
 import './Header.css';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdClose } from 'react-icons/md';
