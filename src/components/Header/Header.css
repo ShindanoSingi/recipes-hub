@@ -4,35 +4,6 @@
       --list-menu-color: #373634;
 }
 
-
-NavLink{
-      /* background-color: #f5f5f5;
-      padding: 20px;
-      border-radius: 10px;
-      margin: 20px 0;
-      text-align: center;
-      font-size: 20px;
-      font-weight: 600;
-      color: #333;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      transition: all 0.3s ease-in-out;
-      cursor: pointer;
-      &:hover{
-            transform: scale(1.05);
-            box-shadow: 0 0 10px rgba(0,0,0,0.2); */
-      /* } */
-
-
-}
-
-
-/* .recipe-logo{
-      width: 3rem;
-      border-radius: 10px;
-      background-size: cover;
-      background-position: center;
-} */
-
 .hamburger-icon{
       color: var(--hamburger-color);
       font-size: 2rem;
@@ -98,104 +69,6 @@ NavLink{
 
 }
 
-/* @media only screen and (max-width: 884px){
-
-      .recipe-logo{
-            width: 6rem;
-      }
-
-      .close-icon, .hamburger-icon{
-            font-size: 3rem;
-      }
-
-      .list-menu {
-            width: 8rem;
-            left: 85%;
-            top: 7.3%;
-      }
-
-      .nav-link{
-            padding: 0.2rem 0;
-            width: 100%;
-            transition: all 0.3s ease-in-out;
-            border-bottom: 2px solid var(--list-menu-item-color);
-      }
-} */
-
-/* @media only screen and (max-width: 834px){
-      .list-menu {
-            top: 6.6%;
-            left: 84%;
-      }
-}
-
-@media only screen and (max-width: 820px){
-      .list-menu {
-            top: 6.6%;
-            left: 84%;
-      }
-}
-
-@media only screen and (max-width: 800px){
-      .list-menu {
-            top: 6.2%;
-            left: 83.5%;
-      }
-}
-
-@media only screen and (max-width: 768px){
-      .list-menu {
-            top: 7.8%;
-            left: 82.8%;
-      }
-}
-
-@media only screen and (max-width: 428px){
-      .list-menu {
-            width: 5rem;
-            top: 9.8%;
-            left: 80.6%;
-      }
-}
-
-@media only screen and (max-width: 390px){
-      .list-menu {
-            top: 9.8%;
-            left: 78%;
-      }
-
-      .list-menu {
-            width: 5rem;
-            left: 78.5%;
-            top: 11%;
-      }
-
-      .nav-link{
-            padding: 0.2rem 0;
-            width: 100%;
-            transition: all 0.3s ease-in-out;
-            border-bottom: 2px solid var(--list-menu-item-color);
-      }
-}
-
-@media only screen and (max-width: 375px){
-      .list-menu {
-            top: 11.4%;
-            left: 78%;
-      }
-}
-
-@media only screen and (max-width: 360px){
-      .list-menu {
-            top: 10.7%;
-            left: 76.5%;
-      }
-}
-
-
-
- */
-
 @media only screen and (min-width: 321px){
       body{
             font-size: 1.2rem;
@@ -241,7 +114,7 @@ NavLink{
       }
 }
 
-@media only screen and (min-width: 360px){
+@media screen and (min-width: 360px){
 
       .list-menu {
             width: 5rem;
@@ -254,7 +127,7 @@ NavLink{
       }
 }
 
-@media only screen and (min-width: 375px){
+@media screen and (min-width: 375px){
 
       .list-menu {
             width: 5rem;
@@ -267,7 +140,7 @@ NavLink{
       }
 }
 
-@media only screen and (min-width: 375px){
+@media screen and (min-width: 375px){
 
       .list-menu {
             position: absolute;
@@ -309,7 +182,7 @@ NavLink{
             font-size: 3rem;
       }
 
-      .home, .about, .contact{
+      .home, .about, .contact, .login{
             font-size: 1.5rem;
       }
 
@@ -390,6 +263,10 @@ NavLink{
                   border-radius: 0px 10px 0px 10px;
             }
 
+            &:nth-child(3):hover{
+                  border-radius: 0px 10px 0px 10px;
+            }
+
             &:last-child:hover{
                   border-radius: 0px 10px 0px 10px;
             }
@@ -421,10 +298,9 @@ NavLink{
             display: none;
       }
 
-      .contact, .about, .home{
+      .contact, .about, .home, .login{
             font-size: 1rem;
       }
-
 
       .active{
             color: var(--list-menu-item-color);
@@ -442,6 +318,10 @@ NavLink{
             }
 
             &:nth-child(2){
+                  border-radius: 0px 10px 0px 10px;
+            }
+
+            &:nth-child(3){
                   border-radius: 0px 10px 0px 10px;
             }
 

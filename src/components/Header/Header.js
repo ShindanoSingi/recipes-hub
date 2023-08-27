@@ -38,6 +38,9 @@ const Header = () => {
 
 			{hamburgerClicked &&
 				<div className="list-menu">
+				<NavLink className="nav-link" to="/">
+						<span className="login">Login</span>
+					</NavLink>
 					<NavLink className="nav-link" to="/">
 						<span className="home">Home</span>
 					</NavLink>
@@ -52,6 +55,9 @@ const Header = () => {
 				</div>}
 
 			<div className="list-menus">
+			<NavLink className="nav-links  nav-link-login" to="/login">
+				<span className="login">Login</span>
+			</NavLink>
 			<NavLink className="nav-links  nav-link-home" to="/">
 				<span className="home">Home</span>
 			</NavLink>
