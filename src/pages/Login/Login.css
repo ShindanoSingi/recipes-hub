@@ -1,4 +1,4 @@
-/* :root{
+:root{
       --login-form-background-color: hsla(#1B1B19, 0.8);
       --large-radius: 20px;
       --small-radius: 10px;
@@ -230,4 +230,4 @@ h1{
       .submit-button-facebook, .submit-button-twitter, .submit-button-google, .username, .password, .submit-button {
             font-size: 1.5rem;
       }
-} */
+}
