@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setHamburgerClicked } from '../../redux/recipeSlice';
 
 const Header = () => {
-	const { hamburgerClicked } = useSelector(state => state.recipeReducer);
+	const { hamburgerClicked, isAuth } = useSelector(state => state.recipeReducer);
 
 	const dispatch = useDispatch();
 
@@ -40,7 +40,17 @@ const Header = () => {
 
 			{hamburgerClicked &&
 				<div className="list-menu">
-					<NavLink
+
+				{/* {
+					localStorage.getItem('auth') === true ? <NavLink
+						className="nav-link"
+						onClick={() => {
+							dispatch(setHamburgerClicked(false));
+						}}
+						to="/login"
+					>
+						<span className="login">Logout</span>
+					</NavLink> : <NavLink
 						className="nav-link"
 						onClick={() => {
 							dispatch(setHamburgerClicked(false));
@@ -49,6 +59,18 @@ const Header = () => {
 					>
 						<span className="login">Login</span>
 					</NavLink>
+				} */}
+
+				<NavLink
+						className="nav-link"
+						onClick={() => {
+							dispatch(setHamburgerClicked(false));
+						}}
+						to="/login"
+					>
+						<span className="login">Login</span>
+					</NavLink>
+
 					<NavLink
 						onClick={() => {
 							dispatch(setHamburgerClicked(false));

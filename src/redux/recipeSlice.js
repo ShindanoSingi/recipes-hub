@@ -3,6 +3,8 @@ import { createSlice } from '@reduxjs/toolkit';
 const recipeSlice = createSlice({
 	name: 'recipe',
 	initialState: {
+		isAuth: false,
+		userInfo: [],
 		recipeTitle: '',
 		recipeDescription: '',
 		recipeImage: '',
@@ -32,6 +34,9 @@ const recipeSlice = createSlice({
 	},
 
 	reducers: {
+		setIsAuth: (state, action) => {
+			state.isAuth = action.payload;
+		},
 		setRecipeTitle: (state, action) => {
 			state.recipeTitle = action.payload;
 		},
@@ -107,10 +112,14 @@ const recipeSlice = createSlice({
 		setHamburgerClicked: (state, action) => {
 			state.hamburgerClicked = action.payload;
 		},
+		setUserInfo: (state, action) => {
+			state.userInfo = action.payload;
+		},
 	},
 });
 
 export const {
+	setIsAuth,
 	setRecipeTitle,
 	setRecipeDescription,
 	setRecipeImage,
@@ -136,5 +145,6 @@ export const {
 	setRecipeAuthorTwitch,
 	setRecipeAuthorDiscord,
 	setHamburgerClicked,
+	setUserInfo,
 } = recipeSlice.actions;
 export default recipeSlice.reducer;
