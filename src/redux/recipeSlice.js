@@ -3,6 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const recipeSlice = createSlice({
 	name: 'recipe',
 	initialState: {
+		username: '',
 		isAuth: false,
 		userInfo: [],
 		recipeTitle: '',
@@ -115,7 +116,9 @@ const recipeSlice = createSlice({
 		setUserInfo: (state, action) => {
 			state.userInfo = action.payload;
 		},
-	},
+		setUsername:(state, action) => {
+			state.username = action.payload;
+}	},
 });
 
 export const {
@@ -146,5 +149,6 @@ export const {
 	setRecipeAuthorDiscord,
 	setHamburgerClicked,
 	setUserInfo,
+	setUsername,
 } = recipeSlice.actions;
 export default recipeSlice.reducer;

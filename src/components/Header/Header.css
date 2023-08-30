@@ -2,6 +2,7 @@
       --hamburger-color: #fff;
       --list-menu-item-color: #FEC441;
       --list-menu-color: #373634;
+      --orange-color: #D55113;
 }
 
 .hamburger-icon{
@@ -187,7 +188,7 @@
             font-size: 3rem;
       }
 
-      .home, .about, .contact, .login{
+      .home, .about, .contact, .login, .username{
             font-size: 1.5rem;
       }
 
@@ -220,7 +221,7 @@
                   background-color: var(--list-menu-item-color);
                   color: var(--list-menu-color);
                   transition: all 0.1s ease-in-out;
-                  width: 100%;
+                  width: 5rem;
                   text-align: center;
             }
 
@@ -251,6 +252,10 @@
             text-align: center;
             padding: 0.2rem 0;
             width: 5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
             transition: all 0.3s ease-in-out;
             text-decoration: none;
 
@@ -292,7 +297,7 @@
 
       .list-menus{
             display: flex;
-            gap: 0rem;
+            gap: .5rem;
       }
 
       .hamburger-icon{
@@ -303,16 +308,19 @@
             display: none;
       }
 
-      .contact, .about, .home, .login{
+      .contact, .about, .home, .login, .user{
             font-size: 1rem;
       }
 
-      .active{
+      .active, .user{
             color: var(--list-menu-item-color);
             font-size: 0.8rem;
             text-align: center;
             padding: 0.2rem 0;
             width: 5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             transition: all 0.3s ease-in-out;
             text-decoration: none;
             background-color: var(--list-menu-item-color);
@@ -340,8 +348,31 @@
 
             &:first-child{
                   border-top: none;
-                  font-size: 0.8rem;
+                  font-size: 1rem;
             }
+      }
+
+      .logout{
+            background-color: var(--list-menu-item-color);
+            color: var(--list-menu-color);
+            border-radius: 10px;
+            border: 2px solid var(--list-menu-item-color);
+      }
+
+      .user{
+            color: var(--orange-color);
+            font-size: 1rem;
+            text-align: center;
+            padding: 0 1rem;
+            width: fit-content;
+            width: -moz-fit-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease-in-out;
+            text-decoration: none;
+            background-color: transparent;
+            border-bottom:2px solid var(--orange-color);
       }
 }
 

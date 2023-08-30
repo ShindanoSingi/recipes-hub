@@ -3,7 +3,7 @@ import './Login.css'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { auth, googleAuthProvider } from '../../firebase-config'
-import { setUserInfo, setIsAuth } from '../../redux/recipeSlice'
+import { setUserInfo, setIsAuth, setUsername } from '../../redux/recipeSlice'
 import { useSelector } from 'react-redux'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -12,7 +12,9 @@ import { signInWithPopup } from 'firebase/auth'
 function Login() {
   const dispatch = useDispatch()
   const navigate = useNavigate()
-  const { userInfo, isAuth } = useSelector((state) => state.recipeReducer)
+  const { userInfo, isAuth, username } = useSelector(
+    (state) => state.recipeReducer,
+  )
 
   const signUpWithGoogle = () => {
     try {
@@ -26,6 +28,9 @@ function Login() {
           uid: user.uid,
           isAuth: localStorage.getItem('auth'),
         }
+        console.log(userInfo)
+        dispatch(setUsername(userInfo.displayName.split(' ')[0]))
+        localStorage.setItem('username', userInfo.displayName.split(' ')[0])
         dispatch(setUserInfo(userInfo))
         dispatch(setIsAuth(true))
         toast.success('Successfully Logged in!')
@@ -35,21 +40,21 @@ function Login() {
     }
   }
 
+  console.log(username)
 
-
-    useEffect(() => {
-      console.log(userInfo)
-      if (localStorage.getItem('auth')) {
-        navigate('/')
-      } else {
-        navigate('/login')
-      }
-    }, [isAuth])
+  useEffect(() => {
+    console.log(userInfo)
+    if (localStorage.getItem('auth')) {
+      navigate('/')
+    } else {
+      navigate('/login')
+    }
+  }, [isAuth])
 
   return (
     <div className="login-container">
       <ToastContainer
-        position="top-right"
+        position="bottom-right"
         autoClose={5000}
         hideProgressBar={false}
         newestOnTop={false}
