@@ -94,9 +94,9 @@ const Header = () => {
       <div className="list-menus">
         {localStorage.getItem('auth') ? (
           <div className="d-flex gap-2 ">
-            <span className="user">{`${localStorage.getItem(
+            <span className="user">{`Logged as ${localStorage.getItem(
               'username',
-            )} is logged in`}</span>
+            )}`}</span>
             <button onClick={signUserOut} className="inline-flex logout">
               Logout
             </button>

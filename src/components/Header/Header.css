@@ -1,6 +1,7 @@
 :root{
       --hamburger-color: #fff;
       --list-menu-item-color: #FEC441;
+      --list-menu-item-dark-color: #7a5e31be;
       --list-menu-color: #373634;
       --orange-color: #D55113;
 }
@@ -47,7 +48,7 @@
 
       &:hover{
             background-color: var(--list-menu-item-color);
-            color: var(--list-menu-color);
+            color: var(--hamburger-color);
             width: 100%;
             text-align: center;
       }
@@ -218,8 +219,8 @@
       .nav-link{
 
             &:hover{
-                  background-color: var(--list-menu-item-color);
-                  color: var(--list-menu-color);
+                  background-color: var(--list-menu-item-dark-color) ;
+                  color: var(--hamburger-color);
                   transition: all 0.1s ease-in-out;
                   width: 5rem;
                   text-align: center;
@@ -260,8 +261,8 @@
             text-decoration: none;
 
             &:hover{
-                  background-color: var(--list-menu-item-color);
-                  color: var(--list-menu-color);
+                  background-color: var(--list-menu-item-dark-color);
+                  color: var(--hamburger-color);
                   text-align: center;
             }
 
